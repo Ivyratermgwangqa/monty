@@ -37,7 +37,7 @@ char **initia_arr(void)
  * @void: No parameters
  * Return: Pointer to the allocated array
  */
-char *malloc_array(void)
+char *malloc_arr(void)
 {
 	int array_s = 100;
 	char *array = NULL;
@@ -61,7 +61,7 @@ void read_process(int fd, char **r)
 	int idx = 0, fl = 1, in_w = 0, word_c = 0;
 	char c = 0;
 
-	for (idx = 0; fl; idx)
+	while (fl)
 	{
 		read(fd, &c, 1);
 		if (c == '\n' || c == EOF || c == 0)

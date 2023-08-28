@@ -10,12 +10,10 @@ void swap(stack_t **stack, unsigned int line_number)
 	stack_t *c;
 	int i, sc;
 
-	if (*s == NULL || s == NULL)
+	if (*stack == NULL || (*stack)->next == NULL)
 		op_e(line_number, "swap");
 
 	c = (*stack)->next;
-	if ((*stack)->next == NULL)
-		op_e(line_number, "swap");
 
 	while (c->next != NULL)
 		c = c->next;

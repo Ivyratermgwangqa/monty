@@ -43,11 +43,11 @@ int main(int argc, char *argv[])
 	while (1)
 	{
 		line++;
-		tokens = _readopc(fd);
+		tokens = _readop(fd);
 		global_var[1] = tokens[0];
 		global_var[2] = tokens[1];
 
-		select_opc(stack, line;
+		select_opc(stack, line);
 
 		free(tokens[0]);
 		free(tokens[1]);
