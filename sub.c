@@ -8,9 +8,9 @@
 void sub(stack_t **stack, unsigned int line_number)
 {
 	stack_t *first, *second;
-	int stack_length = 0;
+	size_t stack_length = 0;
 
-	stack_length = stack_len(stack);
+	stack_length = stack_len(*stack);
 	if (stack_length < 2)
 	{
 		fprintf(stderr, "L%u: can't sub, stack too short\n", line_number);

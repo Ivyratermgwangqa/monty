@@ -9,24 +9,26 @@
 
 int select_opc(stack_t **stack, unsigned int line_number)
 {
+	unsigned int i;
 	instruction_t op[] = {
 		{ "push", push }, { "pall", pall}, { "pop", pop },
 		{ "add", add }, { "nop", nop }, { "sub", sub },
 		{ "pint", pint }, { "swap", swap }, { "\n", nop },
 		{ " ", nop }, { "/t", nop}, { NULL, NULL }
 	};
-	int i = 0;
-
-	if (stack == NULL || global_var[1] == NULL)
-		return (0);
-
-	for (; op[i].opcode != NULL; i++)
+	for (i = 0; op[i].opcode != NULL; i++)
 	{
 		if (strcmp(global_var[1], op[i].opcode) == 0)
 		{
-			op[i].f(stack, line);
-			break;
+			op[i].f(stack, line_number);
+			return (EXIT_SUCCESS);
 		}
 	}
-	return (0);
+	fprintf(stderr, "L%u: unknown instruction %s\n", line_number, global_var[1]);
+	free(global_var[0]);
+	free(global_var[1]);
+        free(global_var[2]);
+	while (*stack != NULL)
+		pop(stack, line_number);
+	exit(EXIT_FAILURE);
 }

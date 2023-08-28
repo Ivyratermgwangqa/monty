@@ -15,7 +15,7 @@ void add(stack_t **stack, unsigned int line_number)
 
 	if (*stack == NULL || stack == NULL)
 	{
-		op_e(line, "add");
+		op_e(line_number, "add");
 	}
 	temp = *stack;
 	while (temp->next != NULL)
@@ -33,7 +33,7 @@ void add(stack_t **stack, unsigned int line_number)
 	if (idx1 == 0 && flag == 0)
 	{
 		free_dlistint(*stack);
-		op_e(line, "add");
+		op_e(line_number, "add");
 	}
 	else
 	{

@@ -15,19 +15,17 @@ void push(stack_t **stack, unsigned int line_number)
 			break;
 	if (isdigit(global_var[2][i] == 0) || global_var[2] == NULL)
 	{
-		fprintf(stderr, "L%u: usage: push integer\n", line);
+		fprintf(stderr, "L%u: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	num = atoi(global_var[2]);
-	new_node = malloc(sizeof(stack_t *));
+	new_node = malloc(sizeof(stack_t));
 	if (new_node == NULL)
-		error_on_allocation;
-	new_node->value = num;
-	if (new_node)
-		new_node->next = NULL;
+		error_on_allocation();
+	new_node->n = num;
+	new_node->next = *stack;
+	new_node->prev = NULL;
 	if (stack == NULL)
 		new_node->prev = NULL;
-	else
-		new_node->prev = *stack;
 	*stack = new_node;
 }
