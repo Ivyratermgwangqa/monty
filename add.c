@@ -7,7 +7,7 @@
  *
  * Return: No return value.
  */
-void add(stack_t **stack, unsigned int line)
+void add(stack_t **stack, unsigned int line_number)
 {
 	stack_t *temp = NULL;
 	stack_t *temp2 = NULL;
