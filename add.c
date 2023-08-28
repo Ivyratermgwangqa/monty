@@ -3,7 +3,7 @@
 /**
  * add - Adds the top two elements of the stack.
  * @stack: A pointer to the top of the stack.
- * @line: The current line number.
+ * @line_number: The current line number.
  *
  * Return: No return value.
  */

@@ -1,9 +1,9 @@
 #include "monty.h"
 
 /**
- * display_stack - display the stack elements
+ * pall - display the stack elements
  * @stack: a doubly linked list representing the stack
- * @line: line number in code (for error messages)
+ * @line_number: number line number in code (for error messages)
  */
 void pall(stack_t **stack, unsigned int line_number)
 {

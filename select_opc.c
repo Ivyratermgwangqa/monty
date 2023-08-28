@@ -12,10 +12,8 @@ int select_opc(stack_t **stack, unsigned int line_number)
 	instruction_t op[] = {
 		{ "push", push }, { "pall", pall}, { "pop", pop },
 		{ "add", add }, { "nop", nop }, { "sub", sub },
-		{ "pint", pint }, { "swap", swap },
-		{ "mul", mul }, { "div", div_m }, { "pchar", _pchar},
-	        { "\n", nop }, { " ", nop },{ "/t", nop },
-		{ "pstr", pstr_t}, { NULL, NULL }
+		{ "pint", pint }, { "swap", swap }, { "\n", nop },
+		{ " ", nop }, { "/t", nop}, { NULL, NULL }
 	};
 	int i = 0;
 

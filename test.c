@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 	int fd = 0;
 	unsigned int line = 0;
 	char **tokens = NULL;
-	char *filename = NULL;
+	char *fname = NULL;
 	stack_t *st = NULL;
 	stack_t **stack = &st;
 
@@ -29,13 +29,13 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 
-	filename = argv[1];
-	global_var[0] = filename;
+	fname = argv[1];
+	global_var[0] = fname;
 
-	fd = open(filename, O_RDONLY);
+	fd = open(fname, O_RDONLY);
 	if (fd == -1)
 	{
-		fprintf(stderr, "Error: Can't open file %s\n", filename);
+		fprintf(stderr, "Error: Can't open file %s\n", fname);
 		free(global_var);
 		exit(EXIT_FAILURE);
 	}

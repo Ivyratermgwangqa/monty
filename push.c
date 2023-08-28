@@ -2,10 +2,10 @@
 
 /**
  * push - function that pushes an integer onto the stack
- * @s: a doubly linked list representing the stack
- * @line: line number in the code (for error messages)
+ * @stack: a doubly linked list representing the stack
+ * @line_number: line number in the code (for error messages)
  */
-void push(stack_t **s, unsigned int line_number)
+void push(stack_t **stack, unsigned int line_number)
 {
 	stack_t *new_node;
 	int i = 0, num;
@@ -25,9 +25,9 @@ void push(stack_t **s, unsigned int line_number)
 	new_node->value = num;
 	if (new_node)
 		new_node->next = NULL;
-	if (s == NULL)
+	if (stack == NULL)
 		new_node->prev = NULL;
 	else
-		new_node->prev = *s;
-	*s = new_node;
+		new_node->prev = *stack;
+	*stack = new_node;
 }
