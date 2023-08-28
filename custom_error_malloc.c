@@ -1,4 +1,4 @@
-#include "custom_monty.h"
+#include "monty.h"
 
 /**
  * custom_error_malloc - prints an error message for memory allocation failure

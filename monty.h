@@ -39,7 +39,7 @@ typedef struct instruction_s
 
 char **global_var;
 char **_readop(int fd);
-int select_opc(stack_t **stack, unsigned int line)
+int select_opc(stack_t **stack, unsigned int line);
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
 void pint(stack_t **stack, unsigned int line_number);

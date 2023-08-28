@@ -7,7 +7,7 @@
  */
 char **_readop(int fd)
 {
-	int idx = 0, array_s = 100, f = 1, in_w = 0, word_c = 0;
+	int idx = 0, array_s = 100, fl = 1, in_w = 0, word_c = 0;
 	char *op = NULL, *arg_val = NULL, *end_m = NULL;
 	char **result = NULL;
        	char c = 0;
@@ -26,9 +26,9 @@ char **_readop(int fd)
 		arg_val[i] = 0;
 	}
 
-	for (result[0] = op, result[1] = arg_val, result[2] = end_m, idx = 0; f; idx++)
+	for (result[0] = op, result[1] = arg_val, result[2] = end_m, idx = 0; fl; idx++)
 	{
-		read(file_descriptor, &character, 1);
+		read(fd, &character, 1);
 		if (character == '\n' || character == EOF || character == 0)
 		{
 			if (character == EOF || character == 0)
@@ -39,7 +39,7 @@ char **_readop(int fd)
 		if (character == ' ' || character == '\t')
 		{
 			idx = -1;
-			if (in_word)
+			if (in_w)
 			{
 				in_w = 0;
 				word_c++;

@@ -1,11 +1,11 @@
-#include "new_monty.h"
+#include "monty.h"
 
 /**
  * push - function that pushes an integer onto the stack
  * @s: a doubly linked list representing the stack
  * @line: line number in the code (for error messages)
  */
-void push(stack_t **s, unsigned int line)
+void push(stack_t **s, unsigned int line_number)
 {
 	stack_t *new_node;
 	int i = 0, num;

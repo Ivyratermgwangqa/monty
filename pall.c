@@ -5,10 +5,10 @@
  * @stack: a doubly linked list representing the stack
  * @line: line number in code (for error messages)
  */
-void pall(stack_t **stack, unsigned int line)
+void pall(stack_t **stack, unsigned int line_number)
 {
 	stack_t *current;
-	(void)line;
+	(void)line_number;
 
 	current = *stack;
 	while (current != NULL)
