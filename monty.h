@@ -39,10 +39,10 @@ typedef struct instruction_s
 
 char **global_var;
 char **_readop(int fd);
-char *malloc_array(void);
-void read_and_process(int fd, char **r);
-void process_character(char **r, char c, int *idx, int *in_w, int *word_c);
-char **initialize_arrays(void);
+char *malloc_arr(void);
+void read_process(int fd, char **r);
+void process_c(char **r, char c, int *idx, int *in_w, int *word_c);
+char **initia_arr(void);
 int select_opc(stack_t **stack, unsigned int line);
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
