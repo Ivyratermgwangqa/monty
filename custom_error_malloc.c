@@ -1,11 +1,10 @@
 #include "monty.h"
 
 /**
- * custom_error_malloc - prints an error message for memory allocation failure
+ * error_on_allocation - prints an error message for memory allocation failure
  */
-void custom_error_malloc(void)
+void error_on_allocation(void)
 {
-	fprintf(stderr, "Error: memory allocation failed");
-	exit(EXIT_FAILURE);
+        fprintf(stderr, "Error: memory allocation failed");
+        exit(EXIT_FAILURE);
 }
-

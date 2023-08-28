@@ -54,5 +54,5 @@ void sub(stack_t **stack, unsigned int line_number);
 void swap(stack_t **stack, unsigned int line_number);
 void mul(stack_t **stack, unsigned int line_number);
 void div_m(stack_t **stack, unsigned int line_number);
-
+void error_on_allocation(void);
 #endif
