@@ -13,7 +13,7 @@ void pall(stack_t **stack, unsigned int line_number)
 	current = *stack;
 	while (current != NULL)
 	{
-		printf("%i\n", current->value);
+		printf("%i\n", current->n);
 		current = current->prev;
 	}
 }
